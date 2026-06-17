@@ -1,207 +1,126 @@
 <div align="center">
 
-# ✨ Abdussameea Patel
+# Abdussameea Patel
+### IT Support Technician · Help Desk L1/L2 · Network & Infrastructure
 
-### Software Engineer • Full-Stack Architect • AI Integration Specialist
-
-*Building production-grade systems that matter*
-
-[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://personal-lac-seven.vercel.app/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/abdussameea-patel)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/abdussameea1813)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-abdussameea--patel-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/abdussameea-patel)
+[![Email](https://img.shields.io/badge/Email-abdussameea1%40gmail.com-D14836?style=flat&logo=gmail&logoColor=white)](mailto:abdussameea1@gmail.com)
+[![Location](https://img.shields.io/badge/Hamilton%2C_ON-Available_for_on--site_work-1B3A6B?style=flat&logo=google-maps&logoColor=white)]()
+[![Work Auth](https://img.shields.io/badge/Canada-Authorized_to_Work-red?style=flat)]()
 
 </div>
 
 ---
 
-## 🎯 Engineering Philosophy
+## Who I Am
 
-> **Production mindset. Clean systems. AI where it adds real value.**
+IT Support Technician based in Hamilton, Ontario. I hold a **Computer Systems Technician diploma from Mohawk College** (Dec 2025) and **2.5+ years of Tier 1/2 help desk experience** owning tickets end-to-end — hardware, software, OS, and network issues.
 
-I architect and deploy **full-stack applications** that bridge the gap between cutting-edge AI capabilities and real-world user needs. My work emphasizes **secure authentication flows**, **scalable data architectures**, and **cloud-native deployment strategies** — delivering systems that reflect professional engineering standards, not tutorials.
+I don't wait for a job to give me lab time. The two projects pinned below were built from scratch, broken on purpose, fixed, and documented — because that's how you actually learn.
 
----
-
-## 💎 Signature Projects
-
-### 🤖 **AI Fitness Assistant**
-> *Intelligent voice-powered fitness coaching platform*
-
-**Tech Stack:** Next.js • PostgreSQL • Prisma • Clerk • OpenAI • Vapi • Shadcn UI
-
-Engineered a conversational AI platform that brings personalized fitness coaching to life through natural voice interactions. The system features secure user authentication, intelligent workout recommendations, and real-time AI-driven guidance.
-
-**Key Achievements:**
-- 🎤 Seamless voice-enabled AI conversation flows using OpenAI & Vapi
-- 🔐 Enterprise-grade authentication with Clerk
-- 🗄️ Robust relational database design with PostgreSQL & Prisma
-- ☁️ Production deployment on Vercel with optimized performance
-
-🔗 [**Live Demo**](https://fitness-ai-dusky.vercel.app/) | 📂 [**Source Code**](https://github.com/abdussameea1813/Fitness-AI)
+**Class G driver's licence** — fully mobile for on-site MSP work across Ontario.
 
 ---
 
-### 🦷 **AI Dental Assistant**
-> *Healthcare-focused conversational AI platform*
+## Technical Skills
 
-**Tech Stack:** Next.js • PostgreSQL • Prisma • Clerk • OpenAI • Vapi
-
-Developed a specialized AI assistant tailored for dental healthcare workflows. The platform demonstrates domain-specific AI integration with clean architectural separation between presentation, business logic, and AI services.
-
-**Key Features:**
-- 🏥 Domain-specific healthcare AI interactions
-- 🎙️ Advanced voice-driven user experience
-- 🏗️ Clean separation of concerns (UI/API/AI)
-- 🔒 Production-ready access control & authentication
-
-📂 [**Source Code**](https://github.com/abdussameea1813/AI-Dental-Assistant)
+| Domain | Skills |
+|--------|--------|
+| **Help Desk** | Tier 1/2 support · ticket triage · SLA prioritization · escalation with written context · remote & deskside |
+| **Active Directory** | User/group/OU management · password resets · account provisioning & deprovisioning · GPO creation & enforcement |
+| **Windows** | Windows 10/11 config & troubleshooting · Windows Server 2022 · imaging · driver & update management |
+| **Microsoft 365** | Outlook · Teams · OneDrive · account provisioning · permissions · license management · MFA |
+| **Networking** | TCP/IP · DNS · DHCP · VLANs · OSPF · HSRP · NAT/PAT · ACLs · LAN/Wi-Fi troubleshooting · Cisco IOS CLI |
+| **Hardware** | Desktop/laptop diagnostics · component replacement · printer & peripheral setup · workstation deployment |
+| **Virtualization** | VirtualBox · Windows Server 2022 DC deployment · Hyper-V concepts |
+| **Documentation** | Incident logs · SOPs · knowledge base articles · onboarding checklists · user-facing guides |
 
 ---
 
-### 🛒 **E-Commerce Platform**
-> *Full-featured online shopping experience*
+## Lab Projects
 
-**Tech Stack:** MongoDB • Express • React • Node.js • JWT • bcrypt • Tailwind • Shadcn UI
+### 🏢 Lab 1 — Multi-Site Enterprise Network Simulation
+> **Cisco Packet Tracer · OSPF · HSRP · ACLs · DHCP Relay · NAT/PAT**
 
-Built a comprehensive e-commerce system following MVC architecture principles. The platform handles complete shopping workflows from product browsing to checkout, with secure authentication and admin management capabilities.
+[![View Lab](https://img.shields.io/badge/View_Lab-enterprise--network--lab-1B3A6B?style=flat&logo=github&logoColor=white)](https://github.com/abdussameea1813/enterprise-network-lab)
 
-**Technical Highlights:**
-- 🔐 JWT-based authentication with bcrypt password encryption
-- 🛡️ RESTful API design for scalable operations
-- 🎨 Modern, responsive UI with Tailwind & Shadcn
-- 📦 Full product, cart, and order management systems
+Built a fully operational 3-site enterprise network — Head Office, Branch, and Data Center — using Cisco 2911 routers and a 3560 L3 switch. Every protocol was configured, deliberately broken, and fixed.
 
-🔗 [**Live Demo**](https://e-commerce-ysvq.onrender.com/) | 📂 [**Source Code**](https://github.com/abdussameea1813/E-commerce)
+**What was built:**
 
----
+- **OSPF Area 0** across all 3 sites via serial WAN links — verified with `show ip route` (O entries for all remote networks) and `show ip ospf neighbor` (all adjacencies in FULL state)
+- **HSRP gateway redundancy** at HQ — virtual IP `192.168.10.254`, priority 110, preempt enabled. Tested failover by killing the active router: traffic recovered in under 3 seconds, zero manual intervention
+- **Named extended ACL (PROTECT-DC)** — permits HQ traffic to Data Center, denies Branch. Applied inbound on WAN interface. Verified with live hit counters: 12 deny matches, 8 permit matches
+- **DHCP Relay** via `ip helper-address` — Branch PCs auto-assign IPs from central HQ server across the WAN, zero static config at Branch
+- **NAT PAT** on HQ-Router — all 3 sites reach internet through one public IP. Default route redistributed via OSPF so Branch and DC learn it automatically
 
-### 🐦 **Social Media Platform** (X Clone)
-> *Real-time social networking experience*
+**Real troubleshooting log:**
 
-**Tech Stack:** MongoDB • Express • React • Node.js • JWT • bcrypt • Shadcn UI
-
-Created an authenticated social platform featuring core social media functionality. The system prioritizes data integrity, secure user interactions, and scalable backend architecture.
-
-**Core Capabilities:**
-- 👥 User authentication & profile management
-- 📝 Post creation, likes, and threaded comments
-- 🔐 Token-based authorization & protected routes
-- 💾 Optimized data modeling for social interactions
-
-🔗 [**Live Demo**](https://x-clone-xdca.onrender.com/login) | 📂 [**Source Code**](https://github.com/abdussameea1813/X)
+| Problem | Root Cause | Fix |
+|---------|-----------|-----|
+| ACL not blocking Branch | ACL applied to wrong interface | Moved to `serial 0/3/0 inbound` |
+| NAT not translating Branch traffic | Serial0/3/0 missing `ip nat inside` | Added to all internal interfaces |
+| Default route not reaching Branch | `default-information originate` missing | Added to OSPF process on HQ-Router |
+| DHCP relay not working | ip helper-address set, but scope missing | Created BranchPool scope on HQ-Server |
 
 ---
 
-### 📊 **Job Application Tracker**
-> *Elegant application management system*
+### 🖥️ Lab 2 — Windows Server 2022 Active Directory Infrastructure
+> **Windows Server 2022 · AD DS · DNS · DHCP · GPO · VirtualBox**
 
-**Tech Stack:** Next.js • PostgreSQL • Prisma • Framer Motion
+[![View Lab](https://img.shields.io/badge/View_Lab-home--lab--network-1B3A6B?style=flat&logo=github&logoColor=white)](https://github.com/abdussameea1813/home-lab-network)
 
-Designed a beautiful job tracking application with smooth animations and intuitive data management. The platform showcases relational database design and modern UI/UX principles.
+Deployed a fully functional corporate domain environment from a bare Windows Server install — replicating the exact infrastructure an MSP technician manages daily.
 
-**Standout Features:**
-- 📈 Full CRUD operations with data integrity
-- ✨ Smooth animations powered by Framer Motion
-- 🎯 Clean state management & performance optimization
-- 🗃️ Well-structured PostgreSQL schemas
+**What was built:**
 
-🔗 [**Live Demo**](https://tracker-cid8a8lux-abdussameeas-projects.vercel.app) | 📂 [**Source Code**](https://github.com/abdussameea1813/Tracker)
+- **Domain Controller (DC01)** — promoted from scratch, new forest `lab.local`, AD DS + DNS + DHCP roles installed and configured
+- **OU structure, users, security groups** — custom OUs (Admins), domain users (jdoe), global security groups (GG-IT-Admins, GG-Staff), group membership managed via ADUC
+- **DHCP scope** `192.168.10.100–.200` with scope options (router, DNS, domain name) — PC01 auto-assigned IP, lease verified in DHCP console and `ipconfig /all`
+- **Group Policy** — created `Block Control Panel` GPO linked to `lab.local`, enforced via `gpupdate /force`, verified blocked access on domain client
+- **Cisco Packet Tracer VLAN topology** — router-on-a-stick inter-VLAN routing, VLAN 10 (Servers) and VLAN 20 (Clients), trunk uplinks — validated 0% packet loss end-to-end
 
----
+**Real troubleshooting log:**
 
-## 🛠️ Technical Arsenal
-
-<table>
-<tr>
-<td valign="top" width="50%">
-
-### 🎨 Frontend Mastery
-- ⚛️ React, Next.js (App Router)
-- 🎨 Tailwind CSS, Shadcn UI
-- 🎭 Framer Motion
-- 📱 Responsive Design
-
-</td>
-<td valign="top" width="50%">
-
-### ⚙️ Backend Excellence
-- 🟢 Node.js, Express
-- 🏗️ REST API Architecture
-- 🎯 MVC Pattern
-- 🔐 JWT, bcrypt, Clerk
-
-</td>
-</tr>
-<tr>
-<td valign="top" width="50%">
-
-### 🗄️ Data & Storage
-- 🐘 PostgreSQL
-- 🍃 MongoDB
-- 💎 Prisma ORM
-- 📊 Relational Design
-
-</td>
-<td valign="top" width="50%">
-
-### 🤖 AI & Deployment
-- 🧠 OpenAI API Integration
-- 🎙️ Voice AI (Vapi)
-- ☁️ Vercel, Render
-- 🚀 Production Systems
-
-</td>
-</tr>
-</table>
+| Problem | Root Cause | Fix |
+|---------|-----------|-----|
+| `nslookup lab.local` timing out | IPv6 DNS taking priority over IPv4 | Disabled IPv6 on PC01 NIC, flushed DNS cache |
+| Ping to DC01 failing | Windows Firewall blocking ICMP | Added inbound ICMP allow rule via `netsh advfirewall` |
+| DNS still failing after firewall fix | DNS listening on IPv6 `::1` not IPv4 | Configured DNS Manager to listen on `192.168.10.10` only |
+| Inter-VLAN ping failing | Trunk port not correctly configured | Reconfigured trunk on correct port after `show interfaces status` |
 
 ---
 
-## 📊 GitHub Analytics
+## Experience
 
-<div align="center">
+**IT Support Technician** — Reytax IT Services *(deployed to Munshi School)*, India · Jan 2021 – Aug 2023
+- Sole Tier 1/2 help desk contact for 200+ staff — hardware, software, OS, printer, and network issues
+- AD account management, workstation configuration, access provisioning, onboarding checklists
+- Authored troubleshooting guides that measurably reduced repeat incidents
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=abdussameea1813&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=58A6FF&icon_color=1F6FEB&text_color=C9D1D9)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=abdussameea1813&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=58A6FF&text_color=C9D1D9)
-
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=abdussameea1813&theme=tokyonight&hide_border=true&background=0D1117&ring=58A6FF&fire=FF6B6B&currStreakLabel=C9D1D9)
-
-</div>
+**Receiver & Stock Associate** — Walmart Canada, ON · Nov 2023 – Present
+- Bridging to full-time IT career while in Canada
 
 ---
 
-## 🎓 Engineering Principles
+## Education & Certifications
 
-```typescript
-const engineeringPhilosophy = {
-  architecture: "Clean, scalable, maintainable",
-  security: "Authentication-first, data protection",
-  deployment: "Production-ready, cloud-native",
-  ai: "Purposeful integration, real value",
-  quality: "Professional standards, not demos"
-};
-```
+🎓 **Computer Systems Technician** — Mohawk College, Hamilton, ON · Dec 2025
+
+🎓 **Computer Engineering Diploma** — Gujarat Technological University, India · May 2021
+
+📋 **CompTIA A+** — In Progress · Network+ & CCNA on roadmap
 
 ---
 
-## 🤝 Open to Opportunities
+## Currently
 
-**Interests:**
-- 🏢 Full-Stack & Backend Engineering Roles
-- 🤖 AI-Powered Product Development
-- ☁️ Cloud-Native Application Architecture
-- 🚀 High-Impact Engineering Teams
+- 📍 Based in Hamilton, ON — available for on-site work across Ontario
+- 🔍 Actively seeking IT Support / Help Desk / NOC Analyst roles
+- 📚 Studying for CompTIA A+ · Building toward Network+
 
 ---
 
 <div align="center">
-
-### 💫 *Let's build something exceptional together*
-
-**[View Portfolio](https://personal-lac-seven.vercel.app/)** • **[Connect on LinkedIn](https://linkedin.com/in/abdussameea-patel)** • **[Explore Code](https://github.com/abdussameea1813)**
-
----
-
-*Crafted with precision and passion* ⚡
-
+<sub>Class G Driver's Licence · Authorized to work in Canada · Bilingual: English & Gujarati</sub>
 </div>
